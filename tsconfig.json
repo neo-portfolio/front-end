@@ -19,7 +19,21 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@components/general/*": ["./src/components/general/*"]
+      "@components/general/*": [
+        "./src/components/general/*"
+      ],
+      "@components/home/*": [
+        "./src/components/home/*"
+      ],
+      "@components/picker": [
+        "./src/components/picker/index.tsx"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "@data/*": [
+        "./data/*"
+      ]
     }
   },
   "exclude": [
