@@ -35,11 +35,11 @@ const Title = Styled.h1`
       
       animation:spin 10s linear infinite;
       @keyframes spin { 
-        0% { transform: rotate(0deg); top: 10px; right: 10px; }
-        25% { transform: rotate(32deg); top: 500px; left: 1000px; }
-        50% { transform: rotate(0deg); top: 250px; left: 400px; }
-        75% { transform: rotate(-32deg); top: 400px; right: 50px; }
-        100% { transform: rotate(0deg); top: 10px; right: 10px; }
+        0% { transform: rotate(0deg); top: 5%; right: 10px; }
+        25% { transform: rotate(32deg); top: 80%; right: 10px; }
+        50% { transform: rotate(0deg); top: 5%; right: 95%; }
+        75% { transform: rotate(-32deg); top: 80%; right: 50%; }
+        100% { transform: rotate(0deg); top: 5%; right: 10px; }
       }
 `;
 
