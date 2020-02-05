@@ -22,6 +22,7 @@ const OptionContainer = Styled.div`
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
+    background-color: white;
 `;
 
 const Option = Styled.div`
@@ -66,14 +67,18 @@ export class AddOne extends Component<Props, State> {
         return output;
     };
 
-    private onType = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        const {value} = e.target;
+    private updateValue = (value: string): void => {
         const newList: string[] = this.getSymbols(value);
         if (newList.length !== 0 || value.length === 0) {
             this.setState({current: value, shown: newList});
             this.value = newList.indexOf(value) === -1 ? null : value;
             this.parent.sendMessage({index: this.index, value: this.value});
         }
+    };
+
+    private onType = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        const {value} = e.target;
+        this.updateValue(value);
     };
 
     public render(): React.ReactElement {
@@ -83,7 +88,8 @@ export class AddOne extends Component<Props, State> {
             <Container>
                 <input type={"text"} onChange={this.onType} value={current}/>
                 {!!shown.length && <OptionContainer>{
-                    shown.map((symbol: string) => <Option value={symbol}>{symbol}</Option>)}
+                    shown.map((symbol: string) => <Option onClick={() => this.updateValue(symbol)}
+                                                          value={symbol}>{symbol}</Option>)}
                 </OptionContainer>}
             </Container>
         );
