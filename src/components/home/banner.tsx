@@ -32,13 +32,15 @@ const Title = Styled.h1`
       right: 30px;
       display: inline;
       margin: 0;
-      -webkit-animation:spin 10s linear infinite;
-      -moz-animation:spin 10s linear infinite;
-      animation:spin 10s linear infinite;
       
-      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+      animation:spin 10s linear infinite;
+      @keyframes spin { 
+        0% { transform: rotate(0deg); top: 10px; right: 10px; }
+        25% { transform: rotate(32deg); top: 500px; left: 1000px; }
+        50% { transform: rotate(0deg); top: 250px; left: 400px; }
+        75% { transform: rotate(-32deg); top: 400px; right: 50px; }
+        100% { transform: rotate(0deg); top: 10px; right: 10px; }
+      }
 `;
 
 
