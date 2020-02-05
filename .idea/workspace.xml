@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ef5f71c-6ef4-4202-b46c-a84e4a05f2e4" name="Default Changelist" comment="Config">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/general/headers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/general/t.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="4ef5f71c-6ef4-4202-b46c-a84e4a05f2e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/symbols.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/wallstreet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/videos/batman.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/general/global.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/home/banner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/home/pickerWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/picker/addOne.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/picker/addOneMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/picker/container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/picker/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/childListener.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/general/headers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/headers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,7 @@
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -47,12 +50,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/videos" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/videos" />
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/general" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -99,8 +108,17 @@
       <option name="presentableId" value="Default" />
       <updated>1580839618282</updated>
       <workItem from="1580839624733" duration="68000" />
-      <workItem from="1580839740465" duration="4482000" />
+      <workItem from="1580839740465" duration="17629000" />
+      <workItem from="1580863618367" duration="7049000" />
     </task>
+    <task id="LOCAL-00001" summary="Config">
+      <created>1580844414791</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580844414792</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,13 +134,21 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1580840864543" />
-    <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2" timestamp="1580844393416">
+    <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2" timestamp="1580870850285">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1580844393416" />
-    <state x="449" y="188" width="1022" height="732" key="SettingsEditor" timestamp="1580843539181">
+    <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1580870850285" />
+    <state x="449" y="188" width="1022" height="732" key="SettingsEditor" timestamp="1580865319113">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="188" width="1022" height="732" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1580843539181" />
+    <state x="449" y="188" width="1022" height="732" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1580865319113" />
+    <state x="555" y="285" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1580870856411">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="285" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1580870856411" />
+    <state x="598" y="126" width="724" height="855" key="find.popup" timestamp="1580863277196">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="598" y="126" width="724" height="855" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1580863277196" />
   </component>
 </project>
