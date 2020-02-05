@@ -32,46 +32,21 @@ const Title = Styled.h1`
       right: 30px;
       display: inline;
       margin: 0;
+      -webkit-animation:spin 10s linear infinite;
+      -moz-animation:spin 10s linear infinite;
+      animation:spin 10s linear infinite;
+      
+      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 `;
 
-interface BannerState {
-    rotation: number;
-}
 
-export class Banner extends Component<{}, BannerState> {
-    private direction: number = -.3;
-    private interval: number;
-    public state: BannerState = {rotation: 0};
-
-    rotate = (): void => {
-        const {rotation} = this.state;
-        const nextRotation = rotation + this.direction;
-        this.setState({rotation: nextRotation});
-        if ((this.direction > 0 && nextRotation > 35) || (this.direction < 0 && nextRotation < -35)) {
-            this.direction *= -1;
-        }
-    };
-
-    render() {
-        return (
-            <Container>
-                <Video autoPlay={true} loop={true} muted={true}>
-                    <source src="/videos/batman.mp4"/>
-                </Video>
-                <Title style={{transform: `rotate(${this.state.rotation}deg)`}}>PORTFOLIO OPTIMIZATION</Title>
-            </Container>
-        );
-    }
-
-    startRotating = (): void => {
-        this.interval = window.setInterval(this.rotate, 17);
-    };
-
-    componentDidMount(): void {
-        this.startRotating();
-    }
-
-    componentWillUnmount(): void {
-        window.clearInterval(this.interval);
-    }
-}
+export const Banner = () => (
+    <Container>
+        <Video autoPlay={true} loop={true} muted={true}>gr
+            <source src="/videos/batman.mp4"/>
+        </Video>
+        <Title>PORTFOLIO OPTIMIZATION</Title>
+    </Container>
+);
