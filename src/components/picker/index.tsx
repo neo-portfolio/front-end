@@ -1,8 +1,35 @@
 import React, {Component} from "react";
+import Styled from "styled-components";
 import {Container} from "./container";
 import {AddOne} from "./addOne";
 import {ChildListener} from "@interfaces/childListener";
 import {AddOneMessage} from "./addOneMessage";
+
+
+const ButtonsContainer = Styled.div`
+    width: 500px;
+    height: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 250px);
+`;
+
+const Button = Styled.div`
+    height: calc(100% - 5px);
+    width: calc(50% - 62px);
+    margin: 0 20px;
+    padding: 10px;
+    text-align: center;
+    transition: 1s;
+    border 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+    
+    :hover {
+        color: white;
+        background-color: black;
+    }
+`;
 
 interface State {
     options: number[]
@@ -17,7 +44,7 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
 
     public sendMessage = (message: AddOneMessage): void => {
         const {index, value} = message;
-        if (value === "delete") {
+        if (value === "remove") {
             delete this.values[index];
             this.options[index] = -1;
             this.setState({options: this.options});
@@ -33,7 +60,11 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
         return (
             <Container>
                 {this.state.options.map((index: number) => index !== -1 && <AddOne index={index} parent={this}/>)}
-                <button onClick={this.addOption}>Add stock</button>
+                <ButtonsContainer>
+                    <Button onClick={this.addOption}>ADD STOCK</Button>
+                    <Button onClick={this.addOption}>COMPUTE</Button>
+                </ButtonsContainer>
+
             </Container>
         );
     }
