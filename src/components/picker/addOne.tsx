@@ -8,7 +8,9 @@ import {CrossButton} from "./crossButton";
 
 const Container = Styled.span`
     width: 100%;
-    border: 1px solid lightgrey;
+    background-color: white;
+    border: 2px solid lightgray;
+    opacity: 1;
     border-radius: 10px;
     display: inline-block;
     height: 33px;
@@ -28,11 +30,12 @@ const OptionContainer = Styled.div`
     left: 0;
     z-index: 1000;
     background-color: white;
-    border: 1px solid #e1e1e1;
+    opacity: 1;
+    border: 2px solid #e1e1e1;
     border-radius: 5px;
     
     ::-webkit-scrollbar {
-      width: 2px;
+      width: 10px;
       height: 2px;
     }
     ::-webkit-scrollbar-button {
@@ -47,11 +50,11 @@ const OptionContainer = Styled.div`
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background: #ffffff;
+      background: white;
     }
     
     ::-webkit-scrollbar-thumb:active {
-      background: #000000;
+      background: white;
     }
     
     ::-webkit-scrollbar-track {
@@ -78,7 +81,7 @@ const Option = Styled.div`
     transition: .4s;
     
     :hover{
-        background-color: black;
+        background-color: grey;
         color: white;
     }
 `;
