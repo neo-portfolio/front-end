@@ -28,6 +28,9 @@
       "@components/picker": [
         "./src/components/picker/index.tsx"
       ],
+      "@components/portfolio": [
+        "./src/components/portfolio/index.tsx"
+      ],
       "@interfaces/*": [
         "./src/interfaces/*"
       ],
