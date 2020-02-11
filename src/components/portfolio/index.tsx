@@ -36,14 +36,18 @@ interface State {
 export default class extends Component<{}, State> {
     public state: State = {options: []};
 
-    private addOption = () => {
+    private apple_show = async () => {
+        const data = await fetch("http://skyr.internet-box.ch:8080/api/portfolio/company_info?symbol=AAPL", {
+            mode: 'no-cors' // 'cors' by default
+        });
+        console.log(data);
     };
 
     public render() {
         return (
             <Container>
                 <ButtonsContainer>
-                    <Button onClick={this.addOption}>Test</Button>
+                    <Button onClick={this.apple_show}>Test</Button>
                 </ButtonsContainer>
             </Container>
         );

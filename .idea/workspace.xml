@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef5f71c-6ef4-4202-b46c-a84e4a05f2e4" name="Default Changelist" comment="Portfolio class 1">
-      <change afterPath="$PROJECT_DIR$/src/components/stats/container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/stats/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/addOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/addOneMessage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolio/crossButton.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/portfolio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +103,8 @@
       <workItem from="1580918741730" duration="12389000" />
       <workItem from="1581270703250" duration="6074000" />
       <workItem from="1581330500909" duration="7134000" />
-      <workItem from="1581358098518" duration="9789000" />
+      <workItem from="1581358098518" duration="12760000" />
+      <workItem from="1581454851429" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="Config">
       <created>1580844414791</created>
@@ -177,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581362662414</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Portfolio class 1">
+      <created>1581448596478</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581448596478</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,11 +204,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581444068186" />
-    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2" timestamp="1581448170116">
+    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2" timestamp="1581455048280">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1580922768673" />
-    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1581448170116" />
+    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1581455048280" />
     <state width="1897" height="254" key="GridCell.Tab.0.bottom" timestamp="1581172696123">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
