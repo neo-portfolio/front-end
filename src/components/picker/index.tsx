@@ -56,15 +56,23 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
         this.setState({options: this.options});
     };
 
+    private compute = async () => {
+        try {
+            const response = await window.fetch("http://skyr.internet-box.ch:8080/api/portfolio/company_info?symbol=TSLA",);
+            console.log(await response.json());
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     public render() {
         return (
             <Container>
                 {this.state.options.map((index: number) => index !== -1 && <AddOne index={index} parent={this}/>)}
                 <ButtonsContainer>
                     <Button onClick={this.addOption}>ADD STOCK</Button>
-                    <Button onClick={this.addOption}>COMPUTE</Button>
+                    <Button onClick={this.compute}>COMPUTE</Button>
                 </ButtonsContainer>
-
             </Container>
         );
     }

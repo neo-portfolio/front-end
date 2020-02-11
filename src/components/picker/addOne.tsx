@@ -19,7 +19,6 @@ const Container = Styled.span`
     margin-bottom: 20px;
 `;
 
-
 // Scrollbar generated on http://webkit-scroll-gen.sourceforge.net/
 const OptionContainer = Styled.div`
     width: 100%;
@@ -99,17 +98,17 @@ const Input = Styled.input`
 `;
 
 interface Props {
-    index: number,
-    parent: ChildListener<AddOneMessage>
+    index: number;
+    parent: ChildListener<AddOneMessage>;
 }
 
 interface State {
-    current: string,
-    shown: string[]
+    current: string;
+    shown: string[];
 }
 
 export class AddOne extends Component<Props, State> {
-    public state: State = {current: "", shown: []};
+    public state: State = {current: '', shown: []};
     private value: string | null;
     private parent: ChildListener<AddOneMessage>;
     private readonly index: number;
@@ -162,18 +161,23 @@ export class AddOne extends Component<Props, State> {
 
         return (
             <Container>
-                <Input type={"text"} onChange={this.onType} value={current}/>
-                {!!shown.length && <OptionContainer>{
-                    shown.map((symbol: string) => <Option key={symbol} value={symbol} onClick={() => {
-                        this.updateValue(symbol);
-                        this.hide();
-                    }}
-                    >{symbol}</Option>)}
-                </OptionContainer>}
+                <Input type={'text'} onChange={this.onType} value={current}/>
+                {!!shown.length && (
+                    <OptionContainer>
+                        {shown.map((symbol: string) => (
+                            <Option
+                                key={symbol}
+                                onClick={() => {
+                                    this.updateValue(symbol);
+                                    this.hide();
+                                }}>
+                                {symbol}
+                            </Option>
+                        ))}
+                    </OptionContainer>
+                )}
                 <CrossButton onClick={this.remove}/>
             </Container>
         );
     }
-
-
 }
