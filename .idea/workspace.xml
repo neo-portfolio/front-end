@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ef5f71c-6ef4-4202-b46c-a84e4a05f2e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/graphs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/network.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/addOne.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/addOneMessage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/crossButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/portfolio/index.tsx" afterDir="false" />
+    <list default="true" id="4ef5f71c-6ef4-4202-b46c-a84e4a05f2e4" name="Default Changelist" comment="Portfolio class 1">
+      <change afterPath="$PROJECT_DIR$/src/components/stats/container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/stats/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/global.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/picker/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/picker/container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/picker/crossButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/picker/crossButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/picker/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/picker/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/addOne.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/addOneMessage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/crossButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
@@ -61,11 +58,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/portfolio" />
       <recent name="$PROJECT_DIR$/src/components/Portfolio" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/components/general" />
-      <recent name="$PROJECT_DIR$/public/videos" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -115,7 +112,7 @@
       <workItem from="1580918741730" duration="12389000" />
       <workItem from="1581270703250" duration="6074000" />
       <workItem from="1581330500909" duration="7134000" />
-      <workItem from="1581358098518" duration="3968000" />
+      <workItem from="1581358098518" duration="9789000" />
     </task>
     <task id="LOCAL-00001" summary="Config">
       <created>1580844414791</created>
@@ -173,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581337237473</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Portfolio container">
+      <created>1581362662414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581362662414</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,18 +192,24 @@
     <MESSAGE value="Click event option" />
     <MESSAGE value="Retarded design" />
     <MESSAGE value="General style and display" />
-    <option name="LAST_COMMIT_MESSAGE" value="General style and display" />
+    <MESSAGE value="Portfolio container" />
+    <MESSAGE value="Portfolio class 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Portfolio class 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580840864543">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1580840864543" />
-    <state x="572" y="62" width="864" height="984" key="CommitChangelistDialog2" timestamp="1581337237277">
+    <state x="726" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581444068186">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581444068186" />
+    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2" timestamp="1581448170116">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="523" y="62" width="864" height="984" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1580922768673" />
-    <state x="572" y="62" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1581337237277" />
+    <state x="572" y="62" width="860" height="814" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1581448170116" />
     <state width="1897" height="254" key="GridCell.Tab.0.bottom" timestamp="1581172696123">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

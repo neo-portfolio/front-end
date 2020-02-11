@@ -2,6 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 import Picker from "@components/picker";
 import Portfolio from "@components/portfolio";
+import Stats from "@components/stats";
 
 const Wrapper = Styled.div`
     width: 100%;
@@ -45,7 +46,7 @@ export const Grid = () => (
             <Portfolio/>
         </PortfolioContainer>
         <PerfContainer>
-            <Picker/>
+            <Stats/>
         </PerfContainer>
     </Wrapper>
 );

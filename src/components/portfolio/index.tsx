@@ -1,25 +1,20 @@
 import React, {Component} from "react";
 import Styled from "styled-components";
 import {Container} from "./container";
-import {AddOne} from "./addOne";
-import {ChildListener} from "@interfaces/childListener";
-import {AddOneMessage} from "./addOneMessage";
-
 
 const ButtonsContainer = Styled.div`
-    width: 500px;
+    width: 30%;
     height: 20px;
     position: absolute;
     bottom: 40px;
-    left: calc(50% - 250px);
+    left: 35%;
 `;
 
 const Button = Styled.div`
     height: calc(100% - 5px);
-    width: calc(50% - 62px);
+    width: 100%;
     background-color: white;
     opacity: 1;
-    margin: 0 20px;
     padding: 10px;
     text-align: center;
     transition: 0.5s;
@@ -38,36 +33,18 @@ interface State {
     options: number[]
 }
 
-export default class extends Component<{}, State> implements ChildListener<AddOneMessage> {
-    private values: Map<number, string | null> = new Map<number, string | null>();
-    private lastIndex: number = 0;
-    private options: number[] = [];
-
+export default class extends Component<{}, State> {
     public state: State = {options: []};
 
-    public sendMessage = (message: AddOneMessage): void => {
-        const {index, value} = message;
-        if (value === "remove") {
-            delete this.values[index];
-            this.options[index] = -1;
-            this.setState({options: this.options});
-        } else this.values[index] = value;
-    };
-
     private addOption = () => {
-        this.options.push(this.lastIndex++);
-        this.setState({options: this.options});
     };
 
     public render() {
         return (
             <Container>
-                {this.state.options.map((index: number) => index !== -1 && <AddOne index={index} parent={this}/>)}
                 <ButtonsContainer>
-                    <Button onClick={this.addOption}>ADD STOCK</Button>
-                    <Button onClick={this.addOption}>COMPUTE</Button>
+                    <Button onClick={this.addOption}>Test</Button>
                 </ButtonsContainer>
-
             </Container>
         );
     }
