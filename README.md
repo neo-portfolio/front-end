@@ -19,3 +19,5 @@
 # Run dev environment
 
     npm run dev
+    
+# Stop dev environement

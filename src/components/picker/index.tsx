@@ -17,17 +17,20 @@ const ButtonsContainer = Styled.div`
 const Button = Styled.div`
     height: calc(100% - 5px);
     width: calc(50% - 62px);
+    background-color: white;
+    opacity: 1;
     margin: 0 20px;
     padding: 10px;
     text-align: center;
-    transition: 1s;
+    transition: 0.5s;
     border 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     
     :hover {
         color: white;
-        background-color: black;
+        background-color: grey;
     }
 `;
 
