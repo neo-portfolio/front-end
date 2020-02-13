@@ -1,4 +1,5 @@
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+require('dotenv').config();
 
 module.exports = {
     webpack: (config) => {
@@ -10,5 +11,8 @@ module.exports = {
 
         return config;
     },
-    target: "serverless"
+    target: "serverless",
+    env: {
+        API_URL: process.env.API_URL
+    }
 };
