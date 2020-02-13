@@ -8,7 +8,7 @@ interface Props {
 export const Headers: FunctionComponent<Props> = ({title}: Props) => (
     <Head>
         <title>{title}</title>
-        <meta httpEquiv="Content-Security-Policy" content="script-src 'self' http://localhost:8080 'unsafe-inline' 'unsafe-eval'; " />
+        <meta httpEquiv={`Content-Security-Policy" content="script-src 'self' ${process.env.API_URL} 'unsafe-inline' 'unsafe-eval'; `} />
         <meta charSet="UTF-8"/>
         <meta name="description" content="Free Web tutorials"/>
         <meta name="keywords" content="alpha, pure, beta, portfolio"/>
