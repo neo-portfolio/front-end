@@ -76,7 +76,7 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
     public render() {
         return (
             <Container>
-                {this.state.options.map((index: number) => index !== -1 && <AddOne index={index} parent={this}/>)}
+                {this.state.options.map((index: number) => index !== -1 && <AddOne key={index} index={index} parent={this}/>)}
                 <ButtonsContainer>
                     <Button onClick={this.addOption}>ADD STOCK</Button>
                     <Button onClick={this.compute}>COMPUTE</Button>
