@@ -5,14 +5,14 @@ import Styled from "styled-components";
 export const CrossButton = Styled.div`
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.9;
     position: absolute;
     right: 5px;
     top: 9px;
     cursor: pointer;
 
     :hover {
-        opacity: 1;
+        opacity: 0.3;
     }
 
     :before, :after {
