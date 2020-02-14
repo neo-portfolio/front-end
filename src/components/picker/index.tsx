@@ -4,6 +4,9 @@ import {Container} from "./container";
 import {AddOne} from "./addOne";
 import {ChildListener} from "@interfaces/childListener";
 import {AddOneMessage} from "./addOneMessage";
+import {ApiService} from "@services/api";
+import {Query} from "@interfaces/neo4j";
+import {Company} from "@interfaces/company";
 
 
 const ButtonsContainer = Styled.div`
@@ -39,9 +42,10 @@ interface State {
 }
 
 export default class extends Component<{}, State> implements ChildListener<AddOneMessage> {
-    private values: Map<number, string | null> = new Map<number, string | null>();
+    private values: { [key: number]: string | null } = {};
     private lastIndex: number = 0;
     private options: number[] = [];
+    private service: ApiService = new ApiService;
 
     public state: State = {options: []};
 
@@ -61,8 +65,9 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
 
     private compute = async () => {
         try {
-            const response = await window.fetch("http://skyr.internet-box.ch:8080/api/portfolio/company_info?symbol=TSLA",);
-            console.log(await response.json());
+            const stocks: string[] = Object.entries(this.values).filter(pair => pair[0] !== "-1").map(pair => pair[1]);
+            const data: Query<Company> = await this.service.stockData(stocks);
+            console.log(data);
         } catch (err) {
             console.error(err);
         }
@@ -71,7 +76,7 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
     public render() {
         return (
             <Container>
-                {this.state.options.map((index: number) => index !== -1 && <AddOne index={index} parent={this}/>)}
+                {this.state.options.map((index: number) => index !== -1 && <AddOne key={index} index={index} parent={this}/>)}
                 <ButtonsContainer>
                     <Button onClick={this.addOption}>ADD STOCK</Button>
                     <Button onClick={this.compute}>COMPUTE</Button>

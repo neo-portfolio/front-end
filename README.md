@@ -1,5 +1,11 @@
 # front-end
 
+# Environment
+
+Create `.env` file containing:
+
+    API_URL=<link to API>
+
 # Install Node + NPM
 
 - [Ubuntu](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)
@@ -19,5 +25,4 @@
 # Run dev environment
 
     npm run dev
-    
-# Stop dev environement
+   
