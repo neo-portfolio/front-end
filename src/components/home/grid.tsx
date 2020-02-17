@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Styled from "styled-components";
 import Picker from "@components/picker";
 import Portfolio from "@components/portfolio";
 import Stats from "@components/stats";
+import {HomeContext} from "@components/home/context";
+import {Query} from "@interfaces/neo4j";
+import {Company} from "@interfaces/company";
 
 const Wrapper = Styled.div`
     width: 100%;
@@ -37,16 +40,21 @@ const PerfContainer = Styled.span`
     grid-row-end: 5;
 `;
 
-export const Grid = () => (
-    <Wrapper>
-        <PickerGridContainer>
-            <Picker/>
-        </PickerGridContainer>
-        <PortfolioContainer>
-            <Portfolio/>
-        </PortfolioContainer>
-        <PerfContainer>
-            <Stats/>
-        </PerfContainer>
-    </Wrapper>
-);
+export const Grid = () => {
+	const [companies, setCompanies] = useState<Query<Company>>();
+
+	return (<Wrapper>
+			<HomeContext.Provider value={{companies, setCompanies}}>
+				<PickerGridContainer>
+					<Picker/>
+				</PickerGridContainer>
+				<PortfolioContainer>
+					<Portfolio/>
+				</PortfolioContainer>
+				<PerfContainer>
+					<Stats/>
+				</PerfContainer>
+			</HomeContext.Provider>
+		</Wrapper>
+	);
+};

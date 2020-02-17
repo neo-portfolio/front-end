@@ -7,6 +7,7 @@ import {AddOneMessage} from "./addOneMessage";
 import {ApiService} from "@services/api";
 import {Query} from "@interfaces/neo4j";
 import {Company} from "@interfaces/company";
+import {HomeContext} from "@components/home/context";
 
 
 const ButtonsContainer = Styled.div`
@@ -44,52 +45,55 @@ const OptionContainer = Styled.span`
 `;
 
 interface State {
-    options: number[]
+	options: number[]
 }
 
 export default class extends Component<{}, State> implements ChildListener<AddOneMessage> {
-    private values: { [key: number]: string | null } = {};
-    private lastIndex: number = 0;
-    private options: number[] = [];
-    private service: ApiService = new ApiService;
+	public static contextType = HomeContext;
 
-    public state: State = {options: []};
+	private values: { [key: number]: string | null } = {};
+	private lastIndex: number = 0;
+	private options: number[] = [];
+	private service: ApiService = new ApiService;
 
-    public sendMessage = (message: AddOneMessage): void => {
-        const {index, value} = message;
-        if (value === "remove") {
-            delete this.values[index];
-            this.options[index] = -1;
-            this.setState({options: this.options});
-        } else this.values[index] = value;
-    };
+	public state: State = {options: []};
 
-    private addOption = () => {
-        this.options.push(this.lastIndex++);
-        this.setState({options: this.options});
-    };
+	public sendMessage = (message: AddOneMessage): void => {
+		const {index, value} = message;
+		if (value === "remove") {
+			delete this.values[index];
+			this.options[index] = -1;
+			this.setState({options: this.options});
+		} else this.values[index] = value;
+	};
 
-    private compute = async () => {
-        try {
-            const stocks: string[] = Object.entries(this.values).filter(pair => pair[0] !== "-1").map(pair => pair[1]);
-            const data: Query<Company> = await this.service.stockData(stocks);
-            console.log(data);
-        } catch (err) {
-            console.error(err);
-        }
-    };
+	private addOption = () => {
+		this.options.push(this.lastIndex++);
+		this.setState({options: this.options});
+	};
 
-    public render() {
-        return (
-            <Container>
-                <OptionContainer>
-                    {this.state.options.map((index: number) => index !== -1 && <AddOne key={index} index={index} parent={this}/>)}
-                </OptionContainer>
-                    <ButtonsContainer>
-                        <Button onClick={this.addOption}>ADD STOCK</Button>
-                        <Button onClick={this.compute}>COMPUTE</Button>
-                    </ButtonsContainer>
-            </Container>
-        );
-    }
+	private compute = async () => {
+		try {
+			const stocks: string[] = Object.entries(this.values).filter(pair => pair[0] !== "-1").map(pair => pair[1]);
+			const data: Query<Company> = await this.service.stockData(stocks);
+			this.context.setCompanies(data);
+		} catch (err) {
+			console.error(err);
+		}
+	};
+
+	public render() {
+		return (
+			<Container>
+				<OptionContainer>
+					{this.state.options.map((index: number) => index !== -1 &&
+                        <AddOne key={index} index={index} parent={this}/>)}
+				</OptionContainer>
+				<ButtonsContainer>
+					<Button onClick={this.addOption}>ADD STOCK</Button>
+					<Button onClick={this.compute}>COMPUTE</Button>
+				</ButtonsContainer>
+			</Container>
+		);
+	}
 }
