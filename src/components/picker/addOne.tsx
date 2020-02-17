@@ -4,6 +4,7 @@ import SYMBOLS from "@data/symbols.json";
 import {ChildListener} from "@interfaces/childListener";
 import {AddOneMessage} from "./addOneMessage";
 import {CrossButton} from "./crossButton";
+import {scrollbar} from "@components/general/scrollbar";
 
 
 const Container = Styled.span`
@@ -32,44 +33,7 @@ const OptionContainer = Styled.div`
     opacity: 1;
     border: 2px solid #e1e1e1;
     border-radius: 5px;
-    
-    ::-webkit-scrollbar {
-      width: 10px;
-      height: 2px;
-    }
-    ::-webkit-scrollbar-button {
-      width: 0px;
-      height: 0px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: #e1e1e1;
-      border: 0px none #ffffff;
-      border-radius: 50px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background: white;
-    }
-    
-    ::-webkit-scrollbar-thumb:active {
-      background: white;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: #666666;
-      border: 0px none #ffffff;
-      border-radius: 50px;
-    }
-    ::-webkit-scrollbar-track:hover {
-      background: #666666;
-    }
-    ::-webkit-scrollbar-track:active {
-      background: #333333;
-    }
-    ::-webkit-scrollbar-corner {
-      background: transparent;
-    }
+    ${scrollbar}
 `;
 
 const Option = Styled.div`

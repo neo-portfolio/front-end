@@ -37,6 +37,12 @@ const Button = Styled.div`
     }
 `;
 
+const OptionContainer = Styled.span`
+    height: 80%;
+    width: 90%;
+    overflow: auto;
+`;
+
 interface State {
     options: number[]
 }
@@ -76,11 +82,13 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
     public render() {
         return (
             <Container>
-                {this.state.options.map((index: number) => index !== -1 && <AddOne key={index} index={index} parent={this}/>)}
-                <ButtonsContainer>
-                    <Button onClick={this.addOption}>ADD STOCK</Button>
-                    <Button onClick={this.compute}>COMPUTE</Button>
-                </ButtonsContainer>
+                <OptionContainer>
+                    {this.state.options.map((index: number) => index !== -1 && <AddOne key={index} index={index} parent={this}/>)}
+                </OptionContainer>
+                    <ButtonsContainer>
+                        <Button onClick={this.addOption}>ADD STOCK</Button>
+                        <Button onClick={this.compute}>COMPUTE</Button>
+                    </ButtonsContainer>
             </Container>
         );
     }
