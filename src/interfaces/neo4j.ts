@@ -8,3 +8,8 @@ export interface Query<T> {
 	row: T[],
 	meta: Meta[]
 }
+
+export interface Weight {
+	symbol: string,
+	weight: number
+}

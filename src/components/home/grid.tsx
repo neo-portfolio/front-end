@@ -4,7 +4,7 @@ import Picker from "@components/picker";
 import Portfolio from "@components/portfolio";
 import Stats from "@components/stats";
 import {HomeContext} from "@components/home/context";
-import {Query} from "@interfaces/neo4j";
+import {Query, Weight} from "@interfaces/neo4j";
 import {Company} from "@interfaces/company";
 
 const Wrapper = Styled.div`
@@ -42,9 +42,10 @@ const PerfContainer = Styled.span`
 
 export const Grid = () => {
 	const [companies, setCompanies] = useState<Query<Company>>();
+	const [weights, setWeights] = useState<Weight[]>();
 
 	return (<Wrapper>
-			<HomeContext.Provider value={{companies, setCompanies}}>
+			<HomeContext.Provider value={{companies, weights, setCompanies, setWeights}}>
 				<PickerGridContainer>
 					<Picker/>
 				</PickerGridContainer>

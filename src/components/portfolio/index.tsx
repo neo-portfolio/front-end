@@ -1,17 +1,6 @@
 import React, {useContext} from "react";
 import {HomeContext} from "@components/home/context";
-import Styled from "styled-components";
-
-const Container = Styled.div`
-    background-color: white;
-    width: calc(100% - 60px);
-    height: calc(100% - 80px);
-    opacity: 0.85;
-    padding: 30px;
-    border: 5px solid black;
-    border-radius: 10px;
-    position: relative;
-`;
+import {RightContainer} from "@components/home/rightContainer";
 
 export default () => {
 	const {companies} = useContext(HomeContext);
@@ -19,8 +8,8 @@ export default () => {
 	// With context https://reactjs.org/docs/context.html
 
 	return (
-		<Container>
+		<RightContainer>
 			{JSON.stringify(companies)}
-		</Container>
+		</RightContainer>
 	);
 }

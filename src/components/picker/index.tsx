@@ -5,7 +5,7 @@ import {AddOne} from "./addOne";
 import {ChildListener} from "@interfaces/childListener";
 import {AddOneMessage} from "./addOneMessage";
 import {ApiService} from "@services/api";
-import {Query} from "@interfaces/neo4j";
+import {Query, Weight} from "@interfaces/neo4j";
 import {Company} from "@interfaces/company";
 import {HomeContext} from "@components/home/context";
 
@@ -20,7 +20,7 @@ const ButtonsContainer = Styled.div`
 
 const Button = Styled.div`
     height: calc(100% - 5px);
-    width: calc(50% - 62px);
+    width: calc(33% - 62px);
     background-color: white;
     opacity: 1;
     margin: 0 20px;
@@ -72,11 +72,25 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
 		this.setState({options: this.options});
 	};
 
+	private get tickers(): string[] {
+		return Object.entries(this.values).filter(pair => pair[0] !== "-1").map(pair => pair[1]);
+	}
+
+	private showData = async () => {
+		try {
+			const tickers: string[] = this.tickers;
+			const data: Query<Company> = await this.service.stockData(tickers);
+			this.context.setCompanies(data);
+		} catch (err) {
+			console.error(err);
+		}
+	};
+
 	private compute = async () => {
 		try {
-			const stocks: string[] = Object.entries(this.values).filter(pair => pair[0] !== "-1").map(pair => pair[1]);
-			const data: Query<Company> = await this.service.stockData(stocks);
-			this.context.setCompanies(data);
+			const tickers: string[] = this.tickers;
+			const data: Weight[] = await this.service.optimizePortfolio(tickers);
+			this.context.setWeights(data);
 		} catch (err) {
 			console.error(err);
 		}
@@ -91,6 +105,7 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
 				</OptionContainer>
 				<ButtonsContainer>
 					<Button onClick={this.addOption}>ADD STOCK</Button>
+					<Button onClick={this.showData}>SHOW DATA</Button>
 					<Button onClick={this.compute}>COMPUTE</Button>
 				</ButtonsContainer>
 			</Container>
