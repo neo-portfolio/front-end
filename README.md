@@ -26,3 +26,18 @@ Create `.env` file containing:
 
     npm run dev
    
+# Docker
+
+## /!\ Don't forget to have a `.env` file in your folder
+
+## Build
+
+    sudo docker build -t front .
+    
+## Run
+
+    sudo docker run -p 3000:3000 front
+    
+Alternatively, you can run it as a demon with:
+
+    sudo docker run -d -p 3000:3000 front
