@@ -1,17 +1,13 @@
-import React, {Component} from "react";
-import {Container} from "./container";
+import {HomeContext} from "@components/home/context";
+import React, {useContext} from "react";
+import {RightContainer} from "@components/home/rightContainer";
 
+export default () => {
+	const {weights} = useContext(HomeContext);
 
-interface State {
-    options: string[]
-}
-export default class extends Component {
-    public state: State = {options: []};
-
-    public render() {
-        return (
-            <Container>
-            </Container>
-        );
-    }
+	return (
+		<RightContainer>
+            {JSON.stringify(weights)}
+		</RightContainer>
+	);
 }
