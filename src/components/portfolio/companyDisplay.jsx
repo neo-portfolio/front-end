@@ -10,6 +10,7 @@ const CompanyStyle = Styled.section`
 
 export const CompanyDisplay = (props) => {
     // Props are of type Company
+    console.log(props.w);
     return (
         <CompanyStyle>
             <p>
@@ -17,6 +18,18 @@ export const CompanyDisplay = (props) => {
             </p>
             <p>
                 Expected returns: {props.expected_returns}
+            </p>
+            <p>
+                Expected returns: {props.sd}
+            </p>
+            <p>
+                Expected returns: {props.alpha}
+            </p>
+            <p>
+                Expected returns: {props.beta}
+            </p>
+            <p>
+                Weight : {JSON.stringify(props.w)}
             </p>
         </CompanyStyle>
     );
