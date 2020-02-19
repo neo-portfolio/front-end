@@ -25,6 +25,9 @@
       "@components/general/*": [
         "./src/components/general/*"
       ],
+      "@components/todo/*": [
+        "./src/components/todo/*"
+      ],
       "@components/home/*": [
         "./src/components/home/*"
       ],
