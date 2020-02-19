@@ -41,7 +41,7 @@ const PerfContainer = Styled.span`
 `;
 
 export const Grid = () => {
-	const [companies, setCompanies] = useState<Query<Company>>();
+	const [companies, setCompanies] = useState<Query<Company>[]>([]);
 	const [weights, setWeights] = useState<Weight[]>();
 
 	return (<Wrapper>
