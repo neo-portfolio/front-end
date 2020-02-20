@@ -8,7 +8,7 @@ import {scrollbar} from "@components/general/scrollbar";
 
 
 const Container = Styled.span`
-    width: 100%;
+    width: calc(100% - 20px - 4px);
     background-color: white;
     border: 2px solid lightgray;
     opacity: 1;
@@ -22,7 +22,7 @@ const Container = Styled.span`
 
 // Scrollbar generated on http://webkit-scroll-gen.sourceforge.net/
 const OptionContainer = Styled.div`
-    width: 100%;
+    width: calc(100% - 4px);
     height: 150px;
     overflow: auto;
     position: absolute;

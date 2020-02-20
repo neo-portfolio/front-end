@@ -38,10 +38,11 @@ const Button = Styled.div`
     }
 `;
 
-const OptionContainer = Styled.span`
-    height: 80%;
-    width: 90%;
-    overflow: auto;
+const OptionContainer = Styled.div`
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 `;
 
 interface State {
