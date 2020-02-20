@@ -7,7 +7,6 @@ import {CompanyDisplay} from "./companyDisplay";
 
 export default () => {
     const {companies}: { companies: Query<Company>[] } = useContext<ContextData>(HomeContext);
-    console.log(companies);
     // Using react hooks https://reactjs.org/docs/hooks-reference.html#usecontext
     // With context https://reactjs.org/docs/context.html
 

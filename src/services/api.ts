@@ -17,7 +17,7 @@ export class ApiService {
 		return fetch(`${this.url}/${path}`, fetchOptions);
 	};
 
-	public stockData = async (symbols: string[]): Promise<Query<Company>> => {
+	public stockData = async (symbols: string[]): Promise<Query<Company>[]> => {
 		const symbolParams: string = symbols.join(",");
 		const response = await fetch(`${this.url}/company_info?symbol=${symbolParams}`);
 		return response.json();

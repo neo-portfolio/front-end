@@ -79,7 +79,7 @@ export default class extends Component<{}, State> implements ChildListener<AddOn
 	private showData = async () => {
 		try {
 			const tickers: string[] = this.tickers;
-			const data: Query<Company> = await this.service.stockData(tickers);
+			const data: Query<Company>[] = await this.service.stockData(tickers);
 			this.context.setCompanies(data);
 		} catch (err) {
 			console.error(err);
