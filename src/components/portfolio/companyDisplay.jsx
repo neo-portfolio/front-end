@@ -5,31 +5,33 @@ const CompanyStyle = Styled.section`
     background-color: "white";
     border-radius: 10px;
     border: 2px solid black;
+    overflow-y: auto;
+`;
+
+const SymbolStyle = Styled.section`
+    display: inline-block;
+   color: white;
 `;
 
 
 export const CompanyDisplay = (props) => {
     // Props are of type Company
-    console.log(props.w);
     return (
         <CompanyStyle>
+            <SymbolStyle>
+                Symbol : {props.symbol}
+            </SymbolStyle>
             <p>
-                Symbol: {props.symbol}
+                Expected returns : {props.expected_returns}
             </p>
             <p>
-                Expected returns: {props.expected_returns}
+                Volatility : {props.sd}
             </p>
             <p>
-                Expected returns: {props.sd}
+                Alpha : {props.alpha}
             </p>
             <p>
-                Expected returns: {props.alpha}
-            </p>
-            <p>
-                Expected returns: {props.beta}
-            </p>
-            <p>
-                Weight : {JSON.stringify(props.w)}
+                Beta : {props.beta}
             </p>
         </CompanyStyle>
     );

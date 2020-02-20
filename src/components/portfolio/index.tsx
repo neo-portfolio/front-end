@@ -7,7 +7,6 @@ import {CompanyDisplay} from "./companyDisplay";
 
 export default () => {
     const {companies}: { companies: Query<Company>[] } = useContext<ContextData>(HomeContext);
-    const {weights} = useContext(HomeContext);
     // Using react hooks https://reactjs.org/docs/hooks-reference.html#usecontext
     // With context https://reactjs.org/docs/context.html
 
@@ -15,7 +14,7 @@ export default () => {
 
     return (
         <RightContainer>
-            {companyArray && companyArray.map((company: Company) => <CompanyDisplay {...company} w={weights} />)}
+            {companyArray && companyArray.map((company: Company) => <CompanyDisplay {...company} />)}
         </RightContainer>
     );
 }
