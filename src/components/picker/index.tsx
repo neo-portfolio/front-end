@@ -17,7 +17,7 @@ const ButtonsContainer = Styled.div`
     bottom: 40px;
     left: 0%;
     
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 850px) {
     left: 10px;
     bottom: 105px;
     }
@@ -42,8 +42,8 @@ const Button = Styled.div`
         background-color: grey;
     }
     
-    @media only screen and (max-width: 750px) {
-    width: calc(100% - 42px);
+    @media only screen and (max-width: 850px) {
+	width: calc(100% - 42px);
     margin: 0px;
     }
 `;

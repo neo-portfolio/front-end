@@ -17,6 +17,12 @@ const Wrapper = Styled.div`
     left: 0;
     top: 0;
     background-color: "back";
+    
+    @media only screen and (max-width: 850px) {
+		grid-template-columns: 2.5% 44.5% 5% 44.5% 3.5%;
+		grid-template-rows: 2.5% 45.5% 3% 45.5% 3.5%;
+    }
+
 `;
 
 const PickerGridContainer = Styled.span`
