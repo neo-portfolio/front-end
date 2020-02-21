@@ -14,4 +14,10 @@ export const Container = Styled.div`
     border: 5px solid black;
     border-radius: 10px;
     position: relative;
+    
+    @media only screen and (max-width: 850px) {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    padding: 5px;
+    }
 `;

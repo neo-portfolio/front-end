@@ -11,11 +11,16 @@ import {HomeContext} from "@components/home/context";
 
 
 const ButtonsContainer = Styled.div`
-    width: 500px;
+    width: 100%;
     height: 20px;
     position: absolute;
     bottom: 40px;
-    left: calc(50% - 250px);
+    left: 0%;
+    
+    @media only screen and (max-width: 750px) {
+    left: 10px;
+    bottom: 105px;
+    }
 `;
 
 const Button = Styled.div`
@@ -36,6 +41,11 @@ const Button = Styled.div`
         color: white;
         background-color: grey;
     }
+    
+    @media only screen and (max-width: 750px) {
+    width: calc(100% - 42px);
+    margin: 0px;
+    }
 `;
 
 const OptionContainer = Styled.div`
@@ -43,6 +53,11 @@ const OptionContainer = Styled.div`
     overflow-y: auto;
     margin: 0;
     padding: 0;
+    
+    @media only screen and (max-width: 850px) {
+    height: 80%;
+    width: 90%;
+    }
 `;
 
 interface State {

@@ -18,6 +18,11 @@ const Container = Styled.span`
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
+    
+    @media only screen and (max-width: 850px) {
+    width: 90%;
+    margin-bottom: 10px;
+    }
 `;
 
 // Scrollbar generated on http://webkit-scroll-gen.sourceforge.net/
