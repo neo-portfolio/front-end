@@ -56,7 +56,7 @@ const OptionContainer = Styled.div`
     
     @media only screen and (max-width: 850px) {
     height: 80%;
-    width: 90%;
+    width: 100%;
     }
 `;
 

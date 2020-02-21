@@ -20,7 +20,7 @@ const Container = Styled.span`
     margin-bottom: 20px;
     
     @media only screen and (max-width: 850px) {
-    width: 90%;
+    width: calc(90% - 10px);
     margin-bottom: 10px;
     }
 `;
@@ -63,6 +63,10 @@ const Input = Styled.input`
     
     :focus {
         outline-color: black;
+    }
+    
+    @media only screen and (max-width: 850px) {
+    width: calc(100% - 42px);
     }
 `;
 
