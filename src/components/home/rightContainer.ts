@@ -12,4 +12,9 @@ export const RightContainer = Styled.div`
     position: relative;
     overflow-y: auto;
     ${scrollbar}
+    
+    @media only screen and (max-width: 850px) {
+    height: calc(100% - 55px);
+    margin: 0px;
+    }
 `;
